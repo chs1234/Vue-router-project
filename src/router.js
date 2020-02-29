@@ -29,6 +29,16 @@ export default new Router({
     {
       path: '/users',
       name: 'users',
+      // beforeEnter(to, from, next) {
+      //   console.log("beforeEnter");
+      //   next();
+
+      //   // if (isUserLogin === true) {
+      //   //   next()
+      //   // } else {
+      //   //   next('/')
+      //   // }
+      // },
       component: Users,
       children: [
         {
