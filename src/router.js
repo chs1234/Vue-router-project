@@ -9,6 +9,8 @@ const About = () => {
 }
 
 const Users = () => import(/* webpackChunkName: "users" */ './views/Users.vue')
+const UsersDetail = () => import(/* webpackChunkName: "users-detail" */ './views/UsersDetail.vue')
+const UsersEdit = () => import(/* webpackChunkName: "users-edit" */ './views/UsersEdit.vue')
 
 export default new Router({
   mode: 'history', // default는 #(해쉬) 모드 => /#/, /#/about
@@ -27,7 +29,19 @@ export default new Router({
     {
       path: '/users',
       name: 'users',
-      component: Users
+      component: Users,
+      children: [
+        {
+          path: ':id',
+          name: 'users-detail',
+          component: UsersDetail
+        },
+        {
+          path: ':id/edit',
+          name: 'users-edit',
+          component: UsersEdit
+        }
+      ]
     }
   ]
 })

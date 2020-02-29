@@ -32,17 +32,7 @@
           </v-list-tile-content>
         </v-list-tile>
 
-        <v-list-tile router :to="{
-            name: 'users', 
-            params: {
-              id: 4321,
-              name: 'chs'
-            },
-            query: {
-              group: 'member',
-              category: 'trail'
-            }
-          }" exact>
+        <v-list-tile router :to="{name: 'users'}" exact>
           <v-list-tile-action>
             <i class="fas fa-user"></i>
           </v-list-tile-action>
