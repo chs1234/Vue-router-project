@@ -37,6 +37,10 @@
             params: {
               id: 4321,
               name: 'chs'
+            },
+            query: {
+              group: 'member',
+              category: 'trail'
             }
           }" exact>
           <v-list-tile-action>
