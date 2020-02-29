@@ -52,6 +52,19 @@ export default new Router({
           component: UsersEdit
         }
       ]
+    },
+    {
+      path: '/redirect-me',
+      // redirect: "/Users"
+      redirect: {
+        name: 'users'
+      }
+    },
+    {
+      path: "/*",
+      redirect: {
+        name: 'home'
+      }
     }
   ]
 })
